@@ -1,0 +1,28 @@
+[tool.poetry]
+    name = "spotify-core"
+    authors = ["prd-tan-le <tan.le@paradox.ai>"]
+    version = "0.1.0"
+    description = ""
+    packages = [{include = "poetry_scripts", from = "."}]
+
+    [tool.poetry.scripts]
+        makemigrations  = "poetry_scripts.django:makemigrations"
+        migrate         = "poetry_scripts.django:migrate"
+        qcluster        = "poetry_scripts.django:qcluster"
+        rcache_usage    = "poetry_scripts.django:rcache_usage"
+        shell           = "poetry_scripts.django:shell"
+
+        server          = "poetry_scripts.django:runserver"
+        sslserver       = "poetry_scripts.django:runsslserver"
+
+    [tool.poetry.dependencies]
+        python = "^3.10"
+        django-environ = "0.4.5"
+        Django = "^4.1.2"
+    split-settings = "^1.0.0"
+
+    [tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
