@@ -7,7 +7,7 @@ optional = false
 python-versions = ">=3.7"
 
 [package.extras]
-tests = ["pytest", "pytest-asyncio", "mypy (>=0.800)"]
+tests = ["mypy (>=0.800)", "pytest-asyncio", "pytest"]
 
 [[package]]
 name = "django"
@@ -30,6 +30,48 @@ bcrypt = ["bcrypt"]
 name = "django-environ"
 version = "0.4.5"
 description = "Django-environ allows you to utilize 12factor inspired environment variables to configure your Django application."
+category = "main"
+optional = false
+python-versions = "*"
+
+[[package]]
+name = "django-filter"
+version = "22.1"
+description = "Django-filter is a reusable Django application for allowing users to filter querysets dynamically."
+category = "main"
+optional = false
+python-versions = ">=3.7"
+
+[package.dependencies]
+Django = ">=3.2"
+
+[[package]]
+name = "djangorestframework"
+version = "3.14.0"
+description = "Web APIs for Django, made easy."
+category = "main"
+optional = false
+python-versions = ">=3.6"
+
+[package.dependencies]
+django = ">=3.0"
+pytz = "*"
+
+[[package]]
+name = "markdown"
+version = "3.4.1"
+description = "Python implementation of Markdown."
+category = "main"
+optional = false
+python-versions = ">=3.7"
+
+[package.extras]
+testing = ["coverage", "pyyaml"]
+
+[[package]]
+name = "pytz"
+version = "2022.5"
+description = "World timezone definitions, modern and historical"
 category = "main"
 optional = false
 python-versions = "*"
@@ -60,13 +102,17 @@ python-versions = ">=2"
 
 [metadata]
 lock-version = "1.1"
-        python-versions = "^3.10"
-content-hash = "dcf41396201c4eec2aaf96225517244629808c4d98d2927b331929d58fe3cd8d"
+        python-versions = "^3.10.5"
+content-hash = "8a3124e2b728f54388bbf6fe0d41659c48c0dfce2758869e8e93b4edd179628e"
 
 [metadata.files]
 asgiref = []
 django = []
 django-environ = []
+django-filter = []
+djangorestframework = []
+markdown = []
+pytz = []
 split-settings = []
 sqlparse = []
 tzdata = []
