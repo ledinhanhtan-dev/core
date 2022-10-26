@@ -48,3 +48,5 @@ AUTH_PASSWORD_VALIDATORS = [
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
 ]
+
+SYSTEM_ID = env.int("SYSTEM_ID", default=0)
