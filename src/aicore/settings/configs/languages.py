@@ -1,7 +1,6 @@
 from aicore.settings import env
 
-# Internationalization
-# https://docs.djangoproject.com/en/dev/topics/i18n/
+# https://docs.djangoproject.com/en/dev/ref/settings/#language-code
 LANGUAGE_CODE = env('LANGUAGE_CODE', default='en-us')
 LANGUAGES = [
     ("en", "English"),

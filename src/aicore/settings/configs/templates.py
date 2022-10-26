@@ -1,6 +1,7 @@
 from os.path import join
 from aicore.settings import BASE_DIR
 
+# https://docs.djangoproject.com/en/dev/ref/settings/#templates
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
