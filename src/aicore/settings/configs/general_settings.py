@@ -1,3 +1,4 @@
+from os.path import dirname, join
 from aicore.settings import env, BASE_DIR
 
 # https://docs.djangoproject.com/en/dev/ref/settings/#root-urlconf
@@ -50,3 +51,5 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 
 SYSTEM_ID = env.int("SYSTEM_ID", default=0)
+
+LOGFILE_ROOT = env("LOGFILE_ROOT", default=join(dirname(BASE_DIR), "logs"))
