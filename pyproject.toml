@@ -1,31 +1,34 @@
 [tool.poetry]
-    name = "spotify-core"
-    authors = ["prd-tan-le <tan.le@paradox.ai>"]
-    version = "0.1.0"
-    description = ""
-    packages = [{include = "poetry_scripts", from = "."}]
+name = "spotify-core"
+authors = ["prd-tan-le <tan.le@paradox.ai>"]
+version = "0.1.0"
+description = ""
+packages = [{ include = "poetry_scripts", from = "." }]
 
-    [tool.poetry.scripts]
-        makemigrations  = "poetry_scripts.django:makemigrations"
-        migrate         = "poetry_scripts.django:migrate"
-        qcluster        = "poetry_scripts.django:qcluster"
-        rcache_usage    = "poetry_scripts.django:rcache_usage"
-        shell           = "poetry_scripts.django:shell"
+[tool.poetry.scripts]
+makemigrations = "poetry_scripts.django:makemigrations"
+migrate = "poetry_scripts.django:migrate"
+qcluster = "poetry_scripts.django:qcluster"
+rcache_usage = "poetry_scripts.django:rcache_usage"
+shell = "poetry_scripts.django:shell"
 
-        server          = "poetry_scripts.django:runserver"
-        sslserver       = "poetry_scripts.django:runsslserver"
+server = "poetry_scripts.django:runserver"
+sslserver = "poetry_scripts.django:runsslserver"
 
-    [tool.poetry.dependencies]
-        python = "^3.10.5"
+[tool.poetry.dependencies]
+python = "^3.10.5"
 
-        django = "^4.1.2"
-        django-environ = "0.4.5"
-        split-settings = "^1.0.0"
-        djangorestframework = "^3.14.0"
-        Markdown = "^3.4.1"
-        django-filter = "^22.1"
+django = "^4.1.2"
+django-environ = "0.4.5"
+split-settings = "^1.0.0"
+djangorestframework = "^3.14.0"
+Markdown = "^3.4.1"
+django-filter = "^22.1"
+redis = "^4.3.4"
+hiredis = "^2.0.0"
+django-redis = "^5.2.0"
 
-    [tool.poetry.dev-dependencies]
+[tool.poetry.dev-dependencies]
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
